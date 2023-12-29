@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.banner {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background-color: #0D295B;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.footer {
+    padding: 10px;
+    background-color: #0D295B;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .banner {
+    gap: 0;
+    justify-content: start;
+    flex-direction: column;   
+    text-align: center;
+    }
+}
+
+.navbar-collapse {
+    flex-grow: 0 !important;
+}
+
+.hero {
+    height: 720px;
+    overflow: hidden;
+}
+
+.hero img {
+    height: 720px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.divider {
+    height: 80px;
+    background-color: #E6DCD5;
+}
+
+.cta {
+    background-color: #0D295B;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.berita {
+    padding: 100px 200px;
+    background-color: #0D295B;
+}
+
+@media (max-width: 768px) {
+    .berita {
+        padding: 50px;
+    }
+}
+
+.daftar-mobil h2{
+    text-align: left;
+}
+
+.daftar-mobil p {
+    text-align: right;
+}
