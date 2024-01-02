@@ -1,6 +1,12 @@
 <div class="banner" role="alert">
-    <div>Hyundai Solo baru | Jalan Ir. Soekarno, Grogol, Sukoharjo, Jawa Tengah</div>
-    <div>customer.service@hyundaisolobaru.com</div>
+    <div>
+        <i class="fa-solid fa-phone"></i>
+        Hyundai Solo baru | Jalan Ir. Soekarno, Grogol, Sukoharjo, Jawa Tengah
+    </div>
+    <div>
+    <i class="fa-solid fa-envelope"></i>
+        customer.service@hyundaisolobaru.com
+    </div>
 </div>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container">
@@ -14,13 +20,20 @@
                     <a class="nav-link" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/mobil">Daftar Mobil</a>
+                    <a class="nav-link" href="/mobil">Daftar Mobil
+                        <i class="fa-solid fa-caret-down"></i>
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Daftar Harga Promo</a>
+                    <a class="nav-link" href="/promo">Daftar Harga Promo</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Kontak Kami</a>
+                    <a class="nav-link" href="/kontak">Kontak Kami</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fa-solid fa-magnifying-glass" id="searchBar"></i>
+                    </a>
                 </li>
             </ul>
         </div>

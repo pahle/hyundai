@@ -13,4 +13,14 @@ class Home extends BaseController
     {
         return view('pages/daftarmobil');
     }
+
+    public function promo(): string
+    {
+        return view('pages/daftarhargapromo');
+    }
+
+    public function kontak(): string
+    {
+        return view('pages/contact');
+    }
 }
