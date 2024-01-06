@@ -12,21 +12,28 @@
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/7a0040fe07.js" crossorigin="anonymous"></script>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <?= $this->include('layout/navbar'); ?>
 
     <div>
+        <!-- Header Title -->
+        
         <?= $this->renderSection('content'); ?>
     </div>
-    
+
     <a href="https://wa.me/1234567890" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
-    <i class="fa-brands fa-whatsapp"></i>
+        <i class="fa-brands fa-whatsapp"></i>
     </a>
 
     <?= $this->include('layout/footer'); ?>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 </body>

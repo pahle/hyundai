@@ -73,17 +73,17 @@
             <div class="carousel-item active">
                 <h1 class="text-center">SHOWROOM EVENT NOVEMBERIA BIKIN CERIA</h1>
                 <p>Hyundai Solo Baru menggelar Showroom Event Novemberia pada tanggal 18 November 2023, mulai pukul 10.00 hingga 17.00 WIB. Acara ini sukses menarik perhatian lebih dari 60 tamu undangan yang hadir...</p>
-                <button class="btn-pelajari-lbh-lanjut">Pelajari Lebih Lanjut</button>
+                <!-- <button class="btn-pelajari-lbh-lanjut">Pelajari Lebih Lanjut</button> -->
             </div>
             <div class="carousel-item">
                 <h1 class="text-center">OTOMOTIF SHOW DENGAN WAJIB PAJAK – SAMSAT BOYOLALI</h1>
                 <p>Hyundai Solo Baru memperkuat kehadirannya dalam industri otomotif dengan turut serta dalam Otomotif Show di Samsat Boyolali, yang berlangsung pada 13-15 November 2023. Acara ini, yang diadakan oleh...</p>
-                <button class="btn-pelajari-lbh-lanjut">Pelajari Lebih Lanjut</button>
+                <!-- <button class="btn-pelajari-lbh-lanjut">Pelajari Lebih Lanjut</button> -->
             </div>
             <div class="carousel-item">
                 <h1 class="text-center">STANDAR BARU PERAWATAN MOBIL YANG TERBAIK – HYUNDAI BEFORE SERVICE</h1>
                 <p>Hyundai Solo Baru menghadirkan layanan purna jual yang unggul dengan Hyundai Before Service. Pada tanggal 25-26 November dan 9-10 Desember 2023, program khusus ini memberikan standar perawatan...</p>
-                <button class="btn-pelajari-lbh-lanjut">Pelajari Lebih Lanjut</button>
+                <!-- <button class="btn-pelajari-lbh-lanjut">Pelajari Lebih Lanjut</button> -->
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -95,7 +95,7 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    <button class="btn-muat-lainnya">Muat Lainnya</button>
+    <!-- <button class="btn-muat-lainnya">Muat Lainnya</button> -->
 </section>
 <div class="divider">
 </div>

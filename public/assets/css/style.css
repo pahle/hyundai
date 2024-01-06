@@ -1,229 +1,141 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar-logo {
+    height: 30px;
 }
 
 .banner {
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    background-color: #0D295B;
-    color: white;
-    font-size: 12px;
-    font-weight: bold;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  background-color: #0d295b;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.header {
+    font-size: 64px;
+    font-weight: 800;
 }
 
 .footer {
-    padding: 10px;
-    background-color: #0D295B;
-    color: white;
+  padding: 10px;
+  background-color: #0d295b;
+  color: white;
 }
 
 @media (max-width: 768px) {
-    .banner {
+  .banner {
     gap: 0;
     justify-content: start;
-    flex-direction: column;   
+    flex-direction: column;
     text-align: center;
-    }
+  }
 }
 
 .navbar-collapse {
-    flex-grow: 0 !important;
+  flex-grow: 0 !important;
 }
 
 .navbar {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .hero {
-    height: 720px;
-    overflow: hidden;
+  height: 720px;
+  overflow: hidden;
 }
 
 .hero img {
-    height: 720px;
-    width: 100%;
-    object-fit: cover;
+  height: 720px;
+  width: 100%;
+  object-fit: cover;
 }
 
 .divider {
-    height: 80px;
-    background-color: #E6DCD5;
+  height: 80px;
+  background-color: #e6dcd5;
 }
 
 .cta {
-    background-color: #0D295B;
-    color: white;
-    padding: 20px;
-    text-align: center;
+  background-color: #0d295b;
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
 
 .berita {
-    padding: 100px 200px;
-    background-color: #0D295B;
+  padding: 100px 200px;
+  background-color: #0d295b;
 }
 
 @media (max-width: 768px) {
-    .berita {
-        padding: 50px;
-    }
+  .berita {
+    padding: 50px;
+  }
 }
 
-.daftar-mobil h2{
-    text-align: left;
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+  border-style: none;
 }
 
-.daftar-mobil p {
-    text-align: right;
-}
-
-.whatsapp-kami {
-    padding-top: 40px;
-    position: relative;
-}
-
-.whatsapp-kami a {
-    background-color: #25D366;
-    color: white;
-    text-decoration: none;
-    border-radius: 10px;
-    padding: 8px 30px;
-    box-sizing: border-box;
-    font-size: large;
-}
-
-.whatsapp-kami i {
-    margin-right: 10px;
-    font-size: 25px;
-}
-
-#accordion .card {
-    border-radius: 0; /* Optional: Remove rounded corners if needed */
-}
-
-.card-header button {
-    text-decoration: none;
-    font-size: x-large;
-}
-
-.desc-text {
-    font-size: 20px;
-    color: rgb(32, 31, 31);
-}
-
-#accordion .card-header {
-    border-bottom: none;
-}
-
-#accordion .card-body {
-    border-top: none;
-}
-
-.card-header button {
-    color: rgb(37, 37, 93);
-}
-
-.card-body a {
-    color: rgb(37, 37, 93);
-}
-
-.btn i {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.media-social {
-    color: white;
-    font-size: x-large;
-}
+/* here */
 
 .btn-pelajari-lbh-lanjut {
-    padding: 10px 20px;
-    border: 2px solid white;
-    background-color: transparent;
-    color: white;
-    cursor: pointer;
-    font-size: 20px;
-    border-radius: 4px;
+  padding: 10px 20px;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 4px;
 }
 
 .btn-muat-lainnya {
-    padding: 10px 20px;
-    border: 2px solid white;
-    background-color: #0D295B;
-    color: white;
-    cursor: pointer;
-    font-size: 20px;
-    border-radius: 4px;
-    margin-top: 10px;
+  padding: 10px 20px;
+  border: 2px solid white;
+  background-color: #0d295b;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 4px;
+  margin-top: 10px;
 }
 
-.nav-link{
-    color: #0D295B;
-    font-size: 15px;
-    font-weight: 700;
-}
-
-.contact {
-    margin-left: 35px;
-}
-
-.contact i {
-    max-width: 35px;
-}
-
-.contact p {
-    font-size: 25px;
-    margin-left: 20px;
+.nav-link {
+  color: #0d295b;
+  font-size: 15px;
+  font-weight: 700;
 }
 
 .whatsapp-btn {
-    position: fixed;
-    bottom: 40px;
-    right: 0px;
-    background-color: #0D295B;
-    color: #fff;
-    border-radius: 100%;
-    width: 55px;
-    height: fit-content;
-    text-align: center;
-    font-size: 35px;
-    text-decoration: none;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.nav-item i {
-    color: #0D295B;
-}
-
-#searchIcon {
-    cursor: pointer;
-    text-decoration: none;
-    color: white;
-}
-
-/* Search bar styles (initially hidden) */
-#searchBar {
-    overflow: hidden;
-    padding: 10px;
-    width: 0;
-    transition: width 0.5s ease-in-out;
-}
-
-#searchBar input {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 8px;
-    margin-top: 5px;
-    border: none;
-    border-radius: 5px;
+  position: fixed;
+  bottom: 40px;
+  right: 0px;
+  background-color: #0d295b;
+  color: #fff;
+  border-radius: 100%;
+  width: 55px;
+  height: fit-content;
+  text-align: center;
+  font-size: 35px;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }

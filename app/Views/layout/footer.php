@@ -6,8 +6,8 @@
                 <div class="fw-light text-sm-start text-center">ⓒ Hak Cipta 2022 Hyundai Solo Baru. Seluruh hak dilindungi undang-undang.</div>
             </div>
             <div class="d-flex gap-3">
-                <a href="#"><i class="fa-brands fa-facebook-f media-social"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram media-social"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f text-white fs-3"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram text-white fs-3"></i></a>
             </div>
         </div>
     </div>

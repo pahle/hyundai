@@ -4,13 +4,13 @@
         Hyundai Solo baru | Jalan Ir. Soekarno, Grogol, Sukoharjo, Jawa Tengah
     </div>
     <div>
-    <i class="fa-solid fa-envelope"></i>
+        <i class="fa-solid fa-envelope"></i>
         customer.service@hyundaisolobaru.com
     </div>
 </div>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="/"><img src="<?= base_url('assets/img/logo.png') ?>" alt="" class="navbar-logo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -20,20 +20,13 @@
                     <a class="nav-link" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/mobil">Daftar Mobil
-                        <i class="fa-solid fa-caret-down"></i>
-                    </a>
+                    <a class="nav-link" href="/mobil">Daftar Mobil</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/promo">Daftar Harga Promo</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/kontak">Kontak Kami</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <i class="fa-solid fa-magnifying-glass" id="searchBar"></i>
-                    </a>
                 </li>
             </ul>
         </div>
