@@ -153,3 +153,9 @@ tr {
   width: 100%;
   object-fit: cover;
 }
+
+.card-img-top {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+}

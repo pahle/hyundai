@@ -28,6 +28,9 @@
                     <a class="nav-link" href="/promo">Daftar Harga Promo</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="/article">Artikel</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="/kontak">Kontak Kami</a>
                 </li>
             </ul>

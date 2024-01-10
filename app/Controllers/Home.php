@@ -69,6 +69,15 @@ class Home extends BaseController
         return view('pages/daftarhargapromo');
     }
 
+    public function article(): string
+    {
+        $data = [
+            'title' => 'Article',
+            'article' => $this->articleModel->findAll(),
+        ];
+        return view('pages/article', $data);
+    }
+
     public function kontak(): string
     {
         return view('pages/contact');
