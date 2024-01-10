@@ -7,7 +7,7 @@
 }
 
 .navbar-logo {
-    height: 30px;
+    height: 50px;
 }
 
 .banner {
@@ -138,4 +138,18 @@ tr {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.mobil-grid {
+
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+
+}
+
+.daftar-mobil-grid {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
 }

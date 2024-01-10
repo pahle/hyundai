@@ -1,11 +1,13 @@
 <div class="banner" role="alert">
     <div>
-        <i class="fa-solid fa-phone"></i>
-        Hyundai Solo baru | Jalan Ir. Soekarno, Grogol, Sukoharjo, Jawa Tengah
+        <i class="fa-solid fa-home pe-1"></i>
+        Jln. Laksda Adisucipto, Km. 9, Maguwoharjo, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281
     </div>
     <div>
-        <i class="fa-solid fa-envelope"></i>
-        customer.service@hyundaisolobaru.com
+        <i class="fa-solid fa-phone pe-1"></i>
+        <a href="https://wa.me/6281392666867" target="_blank" rel="noopener noreferrer" class="text-white text-decoration-none">
+            +62 813‑9266‑6867
+        </a>
     </div>
 </div>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">

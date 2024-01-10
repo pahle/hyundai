@@ -4,38 +4,60 @@ namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
 
-use App\Models\MenuModel;
+use App\Models\MobilModel;
+use App\Models\TypeModel;
+use App\Models\InformationModel;
 
-class Menu extends BaseController
+class Mobil extends BaseController
 {
-    protected $menuModel;
+    protected $mobilModel;
+    protected $typeModel;
+    protected $informationModel;
 
     public function __construct()
     {
-        $this->menuModel = model(MenuModel::class);
+        $this->mobilModel = model(MobilModel::class);
+        $this->typeModel = model(TypeModel::class);
+        $this->informationModel = model(InformationModel::class);
     }
 
     public function index()
     {
-        $menu = $this->menuModel->findAll();
+        $mobil = $this->mobilModel->findAll();
 
         $data = [
-            'title' => 'Menu',
-            'menu' => $menu
+            'title' => 'Mobil',
+            'mobil' => $mobil
         ];
 
-        return view('admin/menu/index', $data);
+        return view('admin/mobil/index', $data);
+    }
+
+    public function show($id)
+    {
+        $mobil = $this->mobilModel->find($id);
+        $type = $this->typeModel->where('id_mobil', $id)->findAll();
+        $information = $this->informationModel->where('id_mobil', $id)->findAll();
+
+
+        $data = [
+            'title' => 'Mobil',
+            'mobil' => $mobil,
+            'type' => $type,
+            'information' => $information,
+        ];
+
+        return view('admin/mobil/detail', $data);
     }
 
     public function create()
     {
-
         $data = [
-            'title' => 'Menu',
+            'title' => 'Mobil',
             'validation' => \Config\Services::validation(),
         ];
 
-        return view('admin/menu/create', $data);
+        return view('admin/mobil/create', $data);
     }
 
     public function save()
@@ -46,20 +68,6 @@ class Menu extends BaseController
                 'errors' => [
                     'required' => 'Nama harus diisi.',
                     'min_length' => 'Nama minimal 3 karakter.',
-                ]
-            ],
-            'bahan' => [
-                'rules' => 'required|min_length[3]|max_length[255]',
-                'errors' => [
-                    'required' => 'Bahan harus diisi.',
-                    'min_length' => 'Bahan minimal 3 karakter.',
-                ]
-            ],
-            'kategori' => [
-                'rules' => 'required|min_length[3]|max_length[255]',
-                'errors' => [
-                    'required' => 'Kategori harus diisi.',
-                    'min_length' => 'Kategori minimal 3 karakter.',
                 ]
             ],
             'harga' => [
@@ -82,11 +90,11 @@ class Menu extends BaseController
 
         if ($this->validate($rules) === false) {
             $data = [
-                'title' => 'Menu',
+                'title' => 'Mobil',
                 'validation' => $this->validator,
             ];
 
-            return view('admin/menu/create', $data);
+            return view('admin/mobil/create', $data);
         } else {
             // Ambil gambar
             $fileGambar = $this->request->getFile('gambar');
@@ -99,31 +107,29 @@ class Menu extends BaseController
 
             $namaGambar = $fileGambar->getName();
 
-            $this->menuModel->save([
+            $this->mobilModel->save([
                 'nama' => $this->request->getVar('nama'),
-                'bahan' => $this->request->getVar('bahan'),
-                'kategori' => $this->request->getVar('kategori'),
                 'harga' => $this->request->getVar('harga'),
                 'gambar' => $namaGambar,
             ]);
 
             session()->setFlashdata('pesan', 'Data berhasil ditambahkan.');
 
-            return redirect()->to(base_url() . 'admin/menu');
+            return redirect()->to(base_url() . 'admin/mobil');
         }
     }
 
     public function edit($id)
     {
-        $menu = $this->menuModel->find($id);
+        $mobil = $this->mobilModel->find($id);
 
         $data = [
-            'title' => 'menu',
-            'menu' => $menu,
+            'title' => 'Mobil',
+            'mobil' => $mobil,
             'validation' => \Config\Services::validation(),
         ];
 
-        return view('admin/menu/edit', $data);
+        return view('admin/mobil/edit', $data);
     }
 
     public function update($id)
@@ -134,20 +140,6 @@ class Menu extends BaseController
                 'errors' => [
                     'required' => 'Nama harus diisi.',
                     'min_length' => 'Nama minimal 3 karakter.',
-                ]
-            ],
-            'bahan' => [
-                'rules' => 'required|min_length[3]|max_length[255]',
-                'errors' => [
-                    'required' => 'Bahan harus diisi.',
-                    'min_length' => 'Bahan minimal 3 karakter.',
-                ]
-            ],
-            'kategori' => [
-                'rules' => 'required|min_length[3]|max_length[255]',
-                'errors' => [
-                    'required' => 'Kategori harus diisi.',
-                    'min_length' => 'Kategori minimal 3 karakter.',
                 ]
             ],
             'harga' => [
@@ -169,46 +161,52 @@ class Menu extends BaseController
 
         if ($this->validate($rules) === false) {
             $data = [
-                'title' => 'Menu',
-                'menu' => $this->menuModel->find($id),
+                'title' => 'Mobil',
+                'mobil' => $this->mobilModel->find($id),
                 'validation' => $this->validator,
             ];
 
-            return view('admin/menu/edit', $data);
+            return view('admin/mobil/edit', $data);
         } else {
-            $menu = $this->menuModel->find($id);
+            $mobil = $this->mobilModel->find($id);
 
             $fileGambar = $this->request->getFile('gambar');
 
             if (!$fileGambar->isValid()) {
-                $namaGambar = $menu['gambar'];
+                $namaGambar = $mobil['gambar'];
             } else {
-                unlink('img/' . $menu['gambar']);
+                unlink('img/' . $mobil['gambar']);
                 $fileGambar->move('img', $fileGambar->getRandomName());
                 $namaGambar = $fileGambar->getName();
             }
 
-            $this->menuModel->save([
+            $this->mobilModel->save([
                 'id' => $id,
                 'nama' => $this->request->getVar('nama'),
-                'bahan' => $this->request->getVar('bahan'),
-                'kategori' => $this->request->getVar('kategori'),
                 'harga' => $this->request->getVar('harga'),
                 'gambar' => $namaGambar,
             ]);
 
             session()->setFlashdata('pesan', 'Data berhasil diubah.');
 
-            return redirect()->to(base_url() . 'admin/menu');
+            return redirect()->to(base_url() . 'admin/mobil');
         }
     }
 
     public function delete($id)
     {
-        $menu = $this->menuModel->find($id);
-        unlink('img/' . $menu['gambar']);
-        $this->menuModel->delete($id);
+        $mobil = $this->mobilModel->find($id);
+        $type = $this->typeModel->where('id_mobil', $id)->findAll();
+        $information = $this->informationModel->where('id_mobil', $id)->findAll();
+        foreach ($type as $t) {
+            $this->typeModel->delete($t['id']);
+        }
+        foreach ($information as $i) {
+            $this->informationModel->delete($i['id']);
+        }
+        unlink('img/' . $mobil['gambar']);
+        $this->mobilModel->delete($id);
         session()->setFlashdata('pesan', 'Data berhasil dihapus.');
-        return redirect()->to(base_url() . 'admin/menu');
+        return redirect()->to(base_url() . 'admin/mobil');
     }
 }

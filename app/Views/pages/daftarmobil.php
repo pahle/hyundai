@@ -10,61 +10,50 @@
 <section class="container my-5 daftar-mobil">
     <div class="grid">
         <div class="row">
-            <div class="col-12 col-sm-6">
-                <img src="https://placehold.co/600x400" alt="" class="object-fit-cover w-100">
-                <table class="table">
-                    <thead>
-                        <th>Creta</th>
-                        <th class="text-end">Rp 300.000.000</th>
-                    </thead>
-                    <tbody class="table-group-divider">
-                        <tr>
-                            <td>New Active MT</td>
-                            <td class="text-end">Rp. 250.000.000</td>
-                        </tr>
-                        <tr>
-                            <td>New Active AT</td>
-                            <td class="text-end">Rp. 260.000.000</td>
-                        </tr>
-                        <tr>
-                            <td>New Elite AT</td>
-                            <td class="text-end">Rp. 275.000.000</td>
-                        </tr>
-                        <tr>
-                            <td>New Limited AT</td>
-                            <td class="text-end">Rp. 300.000.000</td>
-                        </tr>
-                    </tbody>
-                    <!-- <tbody class="table-group-divider">
-                        <tr>
-                            <td>*Additional Rp 3.000.000 untuk warna two-tone</td>
-                        </tr>
-                        <tr>
-                            <td>*Additional Rp 1.500.000 untuk Warna two tone (Prime, New Prime, X)</td>
-                        </tr>
-                        <tr>
-                            <td>*Additional Rp 3.500.000 untuk Warna Gold Matte & White Matte</td>
-                        </tr>
-                    </tbody> -->
-                    <tfoot class="table-group-divider">
-                        <tr>
-                            <td colspan="2">
-                                *Additional Rp 1.000.000 untuk Captain Seat (Essential, Prime, New Prime, X)
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                                *Additional Rp 1.500.000 untuk Warna two tone (Prime, New Prime, X)
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                                *Additional Rp 3.500.000 untuk Warna Gold Matte & White Matte
-                            </td>
-                        </tr>
-                    </tfoot>
-                </table>
-            </div>
+            <?php foreach ($mobil as $m) : ?>
+
+                <div class="col-12 col-xl-6">
+                    <img src="/img/<?= $m['gambar'] ?>" alt="" class="daftar-mobil-grid">
+                    <table class="table">
+                        <thead>
+                            <th><?= $m['nama'] ?></th>
+                            <th class="text-end">Rp. <?= number_format($m['harga'], 0, ',', '.') ?></th>
+                        </thead>
+                        <tbody class="table-group-divider">
+
+                            <?php foreach ($type as $t) : ?>
+
+                                <?php if ($t['id_mobil'] == $m['id']) : ?>
+                                    <tr>
+                                        <td><?= $t['nama'] ?></td>
+                                        <td class="text-end">Rp. <?= number_format($t['harga'], 0, ',', '.') ?></td>
+                                    </tr>
+
+                                <?php endif; ?>
+
+                            <?php endforeach; ?>
+
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td class="table-group-divider" colspan="2"></td>
+                            </tr>
+                            <?php foreach ($information as $i) : ?>
+
+                                <?php if ($i['id_mobil'] == $m['id']) : ?>
+
+                                    <tr>
+                                        <td><?= $i['information'] ?></td>
+                                    </tr>
+
+                                <?php endif; ?>
+
+                            <?php endforeach; ?>
+                        </tfoot>
+                    </table>
+                </div>
+
+            <?php endforeach; ?>
         </div>
 </section>
 

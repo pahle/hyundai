@@ -9,27 +9,31 @@
 </div>
 
 <section class="container my-5 kontak">
-    <h1 class="fs-1 fw-bold mb-5 text-center">Kontak Kami</h1>
-
-    <div class="d-flex">
-        <div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15812.22838212184!2d110.4282296!3d-7.7837715!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5a02c2feb0f5%3A0x5f1db084fe25de44!2sHyundai%20Adisucipto%20Official!5e0!3m2!1sid!2sid!4v1704189232944!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15812.22838212184!2d110.4282296!3d-7.7837715!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5a02c2feb0f5%3A0x5f1db084fe25de44!2sHyundai%20Adisucipto%20Official!5e0!3m2!1sid!2sid!4v1704189232944!5m2!1sid!2sid" height="601" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded-3 w-100">
             </iframe>
         </div>
-        <div class="contact">
-            <div class="d-flex">
-                <h1><i class="fa-solid fa-envelope"></i></h1>
-                <p>adisucipto.hyundai@gmail.com</p>
+        <div class="col-12 col-md-6 d-flex flex-column">
+            <div class="d-flex gap-3 align-items-center">
+                <i class="fa-solid fa-envelope fs-4"></i>
+                <div class="fs-5">
+                    adisucipto.hyundai@gmail.com
+                </div>
             </div>
-            <div class="d-flex mt-3">
-                <h1><i class="fa-solid fa-location-dot"></i></h1>
-                <p>
-                    Jl. Laksda Adisucipto Jl. Kembang Raya No.KM, RW.9, Karangploso, Maguwoharjo, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281
-                </p>
+            <div class="d-flex gap-3 mt-3 align-items-center">
+                <i class="fa-solid fa-location-dot fs-4"></i>
+                <div class="fs-5">
+                    Jln. Laksda Adisucipto, Km. 9, Maguwoharjo, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281
+                </div>
             </div>
-            <div class="d-flex mt-3">
-                <h1><i class="fa-brands fa-square-whatsapp"></i></h1>
-                <p><a href="wa.me/6281392666867">0813-9266-6867</a></p>
+            <div class="d-flex gap-3 mt-3 align-items-center">
+                <i class="fa-solid fa-phone fs-4"></i>
+                <a href="wa.me/6281392666867" class="text-decoration-none text-black">
+                    <div class="fs-5">
+                        +62 813‑9266‑6867
+                    </div>
+                </a>
             </div>
         </div>
     </div>

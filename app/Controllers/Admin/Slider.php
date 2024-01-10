@@ -59,6 +59,8 @@ class Slider extends BaseController
             ]
         ];
 
+        // dd($this->validate($rules), $this->validator);
+
         if ($this->validate($rules) === false) {
             $data = [
                 'title' => 'Slider',

@@ -8,7 +8,7 @@ use App\Models\MobilModel;
 use App\Models\BeritaModel;
 use App\Models\ArticleModel;
 
-class Home extends BaseController
+class Admin extends BaseController
 {
     protected $sliderModel;
     protected $mobilModel;
@@ -39,5 +39,6 @@ class Home extends BaseController
         ];
 
         return view('admin/index', $data);
+
     }
 }
