@@ -25,10 +25,8 @@ class Home extends BaseController
         $this->informationModel = new InformationModel();
         $this->mobilModel = new MobilModel();
         $this->sliderModel = new SliderModel();
-        $this->typeModel = new TypeModel();
-        
+        $this->typeModel = new TypeModel();        
     }
-
 
     public function index(): string
     {
@@ -66,7 +64,14 @@ class Home extends BaseController
 
     public function promo(): string
     {
-        return view('pages/daftarhargapromo');
+        $data = [
+            'title' => 'Promo',
+            'mobil' => $this->mobilModel->findAll(),
+            'type' => $this->typeModel->findAll(),
+            'information' => $this->informationModel->findAll(),
+        ];
+
+        return view('pages/daftarhargapromo', $data);
     }
 
     public function article(): string
@@ -77,9 +82,41 @@ class Home extends BaseController
         ];
         return view('pages/article', $data);
     }
+    public function show($id)
+    {
+        $mobil = $this->mobilModel->find($id);
+        $type = $this->typeModel->where('id_mobil', $id)->findAll();
+        $information = $this->informationModel->where('id_mobil', $id)->findAll();
+
+
+        $data = [
+            'title' => 'Mobil',
+            'mobil' => $mobil,
+            'type' => $type,
+            'information' => $information,
+        ];
+
+        return view('admin/mobil/detail', $data);
+    }
+
+    public function detailarticle($id)
+    {
+        $article = $this->articleModel->find($id);
+
+        $data = [
+            'article' => $article,
+        ];
+
+        return view('pages/detailarticle', $data);
+    }
 
     public function kontak(): string
     {
         return view('pages/contact');
+    }
+
+    public function tentang(): string
+    {
+        return view('pages/tentang');
     }
 }

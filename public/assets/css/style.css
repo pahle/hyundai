@@ -159,3 +159,24 @@ tr {
   width: 100%;
   object-fit: cover;
 }
+
+.dynamic-container {
+  min-height: 77.3dvh;
+}
+
+.promo-price {
+  background-color: #0d295b;
+}
+
+.contact-card {
+  background-color: #0d295b;
+}
+
+.alert-contact {
+  color: #fff;;
+}
+
+.alert-contact:hover {
+  color: #035fff;
+  transition: 0.5s;
+}

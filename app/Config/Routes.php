@@ -10,6 +10,9 @@ $routes->get('/mobil', 'Home::mobil');
 $routes->get('/promo', 'Home::promo');
 $routes->get('/kontak', 'Home::kontak');
 $routes->get('/article', 'Home::article');
+$routes->get('/detailarticle/(:segment)', 'Home::detailarticle/$1');
+// tentang
+$routes->get('/tentang', 'Home::tentang');
 
 $routes->get('/admin', 'Admin\Admin::index', ['filter' => 'authGuard']);
 $routes->group('admin/slider', ['filter' => 'authGuard'], function ($routes) {

@@ -32,16 +32,16 @@
     <div class="container text-center pt-5">
         <div class="row">
             <?php foreach ($mobil as $m) : ?>
-                <div class="col-12 col-sm-4">
+                <a class="col-12 col-sm-4 text-decoration-none text-black" href="/mobil#<?= $m['nama'] ?>">
                     <img src="/img/<?= $m['gambar'] ?>" alt="" class="w-100 mobil-grid">
                     <p class="mt-3 fs-4"><?= $m['nama'] ?></p>
-                </div>
+                </a>
             <?php endforeach; ?>
         </div>
     </div>
 </section>
-<!-- <div class="divider">
-</div> -->
+<div class="divider">
+</div>
 <section class="container my-5 text-center">
     <h1 class="fs-1 text-center fw-bold">Berita</h1>
     <div id="carouselExample" class="carousel slide d-flex align-items-center berita text-white text-center">
@@ -71,10 +71,24 @@
     </div>
     <!-- <button class="btn-muat-lainnya">Muat Lainnya</button> -->
 </section>
-<!-- <div class="divider">
-</div> -->
-<section class="grid mt-5">
+<div class="divider">
+</div>
+<section class="grid">
     <div class="text-center">
+        <div class="row">
+            <a class="col-12 col-sm-6 p-0 position-relative overflow-hidden" href="/tentang">
+                <img src="<?= base_url('assets/img/tentang.jpg') ?>" alt="" class="w-100 object-fit-cover" height="426">
+                <div class="position-absolute top-0 start-0 w-100 h-100 bg-black opacity-50"></div>
+                <h1 class="position-absolute top-50 start-50 translate-middle text-white">Tentang Hyundai</h1>
+            </a>
+            <a class="col-12 col-sm-6 p-0 position-relative overflow-hidden" href="/promo">
+                <img src="<?= base_url('assets/img/promo.jpg') ?>" alt="" class="w-100 object-fit-cover" height="426">
+                <div class="position-absolute top-0 start-0 w-100 h-100 bg-black opacity-50"></div>
+                <h1 class="position-absolute top-50 start-50 translate-middle text-white">Promo</h1>
+            </a>
+        </div>
+    </div>
+    <!-- <div class="text-center">
         <div class="row">
             <div class="col-12 col-sm-6 p-0">
                 <img src="https://placehold.co/300x150" alt="" class="w-100">
@@ -83,17 +97,7 @@
                 <img src="https://placehold.co/300x150" alt="" class="w-100">
             </div>
         </div>
-    </div>
-    <div class="text-center">
-        <div class="row">
-            <div class="col-12 col-sm-6 p-0">
-                <img src="https://placehold.co/300x150" alt="" class="w-100">
-            </div>
-            <div class="col-12 col-sm-6 p-0">
-                <img src="https://placehold.co/300x150" alt="" class="w-100">
-            </div>
-        </div>
-    </div>
+    </div> -->
 </section>
 
 <?php $this->endSection(); ?>

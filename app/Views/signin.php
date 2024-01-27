@@ -36,25 +36,23 @@
     <main class="form-signin">
 
         <form action="<?php echo base_url(); ?>/SigninController/loginAuth" method="post">
-            <img class="mb-4" src="<?= base_url('assets/img/logo-header.png') ?>" alt="" height="75">
+            <img class="mb-4" src="<?= base_url('assets/img/logo.png') ?>" alt="" height="75">
             <?php if (session()->getFlashdata('msg')) : ?>
                 <div class="alert alert-warning">
                     <?= session()->getFlashdata('msg') ?>
                 </div>
             <?php endif; ?>
-            <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+            <h1 class="h3 mb-3 fw-normal">Sign In</h1>
 
-            <div class="form-floating">
+            <div class="">
                 <input type="email" name="email" placeholder="Email" value="<?= set_value('email') ?>" class="form-control">
-                <label for="floatingInput">Email address</label>
             </div>
-            <div class="form-floating">
+            <div class="">
                 <input type="password" name="password" placeholder="Password" class="form-control">
-                <label for="floatingPassword">Password</label>
             </div>
 
             <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-            <p class="mt-5 mb-3 text-muted">&copy; KJHotel</p>
+            <p class="mt-5 mb-3 text-muted">&copy; Hyundai Yogyakarta</p>
         </form>
     </main>
 </body>

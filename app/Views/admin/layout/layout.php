@@ -32,7 +32,7 @@
 
 <body>
 
-    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+    <header class="navbar navbar-light sticky-top bg-light flex-md-nowrap p-0 shadow">
         <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 d-flex align-items-center justify-content-center fs-5" href="/">
             <img src="<?= base_url('assets/img/logo.png') ?>" alt="" height="40" class="d-inline-block align-text-top me-2">
         </a>

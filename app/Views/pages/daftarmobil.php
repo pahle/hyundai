@@ -12,7 +12,7 @@
         <div class="row">
             <?php foreach ($mobil as $m) : ?>
 
-                <div class="col-12 col-xl-6">
+                <div class="col-12 col-xl-6" id="<?= $m['nama'] ?>">
                     <img src="/img/<?= $m['gambar'] ?>" alt="" class="daftar-mobil-grid">
                     <table class="table">
                         <thead>

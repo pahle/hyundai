@@ -8,7 +8,7 @@
     </h1>
 </div>
 
-<section class="container my-5 kontak">
+<section class="container my-5 article">
     <div class="grid gap-3">
         <div class="row ">
             <?php foreach ($article as $a) : ?>
@@ -28,7 +28,7 @@
                             }
                             ?>
                             <p class="card-text"><?= $string ?></p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="/detailarticle/<?= $a['id'] ?>" class="btn btn-dark">Read More</a>
                         </div>
                     </div>
                 </div>
